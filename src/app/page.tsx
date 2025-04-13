@@ -3,23 +3,19 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-
 import localFont from "next/font/local";
-
-import MainCenterGrid from "./components/MainCenterGrid";
-import {
-  Color,
-  Framework,
-  Iconography,
-  Imagery,
-  Logo,
-  Motion,
-  Typography,
-  VoiceAndTone,
-} from "./components/SVGLogos";
+import Center from "./components/Center";
+import { Typography } from "./components/Typography";
+import { VoiceAndTone } from "./components/VoiceAndTone";
+import { Motion } from "./components/Motion";
+import { Iconography } from "./components/Iconography";
+import { Color } from "./components/Color";
+import { Logo } from "./components/Logo";
+import { Framework } from "./components/Framework";
+import { Imagery } from "./components/Imagery";
 
 const secondary = localFont({
-  src: "./../app/fonts/6.woff2",
+  src: "./../app/fonts/local.woff2",
 });
 
 export default function Home() {
@@ -253,7 +249,7 @@ export default function Home() {
     >
       <div
         ref={gridRef}
-        className="grid-container grid gap-2 grid-cols-[1fr_1fr_100px_1fr_1fr] grid-rows-[1fr_100px_1fr] w-full h-screen  sticky top-0 overflow-hidden object-center p-4 "
+        className="grid-container grid gap-2 grid-cols-[1fr_1fr_100px_1fr_1fr] grid-rows-[1fr_100px_1fr] w-full h-screen  sticky top-0 overflow-hidden object-center p-2"
       >
         {/* Grid columns */}
         <div className="border row-span-2 outer-left first bg-[#283750] z-10 relative flex justify-around items-start flex-col p-6 text-[#b4c8e1] hover:bg-[#1e1919] hover:text-[#f7f6f5] cursor-pointer transition-colors duration-150 rounded-tl-2xl">
@@ -268,19 +264,19 @@ export default function Home() {
             <VoiceAndTone />
           </div>
         </div>
-        <div className="bg-[#14c8eb] row-span-2 outer-right object-center third z-10 flex justify-around items-start flex-col p-6 text-[#055463] hover:bg-[#1e1919] hover:text-[#f7f6f5] cursor-pointer transition-colors duration-150">
+        <div className="bg-[#3dd3ee] row-span-2 outer-right object-center third z-10 flex justify-around items-start flex-col p-6 text-[#055463] hover:bg-[#1e1919] hover:text-[#f7f6f5] cursor-pointer transition-colors duration-150">
           <h1 className="text-4xl">Logo</h1>
           <div className="w-full h-full flex justify-center items-center">
             <Logo />
           </div>
         </div>
-        <div className="border fourth bg-[#fa551e] flex justify-around items-start flex-col p-6 text-[#6d2e09] hover:bg-[#1e1919] hover:text-[#f7f6f5] cursor-pointer transition-colors duration-150 rounded-tr-2xl">
+        <div className="border fourth bg-[#fa551e] flex justify-around items-start flex-col p-6 text-[#4e0119] hover:bg-[#1e1919] hover:text-[#f7f6f5] cursor-pointer transition-colors duration-150 rounded-tr-2xl">
           <h1 className="text-4xl">Typography</h1>
           <div className="w-full h-full flex justify-center items-center">
             <Typography />
           </div>
         </div>
-        <div className="bg-[#f9a34b] row-span-2  object-center fifth relative z-10 flex justify-around items-start flex-col p-6 text-[#6d2e09] hover:bg-[#1e1919] hover:text-[#f7f6f5] cursor-pointer transition-colors duration-150">
+        <div className="bg-[#ff8c19] row-span-2  object-center fifth relative z-10 flex justify-around items-start flex-col p-6 text-[#6d2e09] hover:bg-[#1e1919] hover:text-[#f7f6f5] cursor-pointer transition-colors duration-150">
           <h1 className="text-4xl">Color</h1>
           <div className="w-full h-full flex justify-center items-center">
             <Color />
@@ -288,7 +284,7 @@ export default function Home() {
         </div>
 
         {/* Center Box */}
-        <MainCenterGrid />
+        <Center />
 
         <div className="border row-span-2 outer-left seventh bg-[#c8aff0] z-10 flex justify-around items-start flex-col p-6 text-[#682760] hover:bg-[#1e1919] hover:text-[#f7f6f5] cursor-pointer transition-colors duration-150 rounded-br-2xl">
           <h1 className="text-4xl">Motion</h1>
@@ -296,7 +292,7 @@ export default function Home() {
             <Motion />
           </div>
         </div>
-        <div className="border eighth bg-[#b4dc19] z-10 flex justify-around items-start flex-col p-6 text-[#055463] hover:bg-[#1e1919] hover:text-[#f7f6f5] cursor-pointer transition-colors duration-150 rounded-bl-2xl">
+        <div className="border eighth bg-[#b4dc19] z-10 flex justify-around items-start flex-col p-6 text-[#175641] hover:bg-[#1e1919] hover:text-[#f7f6f5] cursor-pointer transition-colors duration-150 rounded-bl-2xl">
           <h1 className="text-4xl">Iconography</h1>
           <div className="w-full h-full flex justify-center items-center">
             <Iconography />
